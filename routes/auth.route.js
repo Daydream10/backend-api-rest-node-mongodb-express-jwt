@@ -21,8 +21,10 @@ router.post('/register', [
       return value;
     })
 
-], validationResultExpress,
+],
+  validationResultExpress,
   register);
+
 router.post("/login", [
   body("email", "Wrong email format")
     .trim()
